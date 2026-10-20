@@ -1,0 +1,103 @@
+/* Candy Jelly for macOS. All rules are scoped and removal restores app styling. */
+html[data-candy-jelly="macos"] {
+  --jelly-ink: #45334b;
+  --jelly-muted: #746078;
+  --jelly-accent: #b33d7e;
+  --jelly-surface: #fff7fc;
+  --jelly-card: #fffafd;
+  --jelly-border: #e9cedf;
+  --jelly-pink: #f9dcec;
+  --jelly-mint: #daf3e6;
+  --jelly-lilac: #eae1fa;
+  --jelly-shadow: 0 8px 24px #7d326b0c;
+  --color-token-main-surface-primary: var(--jelly-surface);
+  --color-token-main-surface-secondary: var(--jelly-card);
+  --color-token-sidebar-surface-primary: #f8eef7;
+  --color-token-text-primary: var(--jelly-ink);
+  --color-token-text-secondary: var(--jelly-muted);
+  --color-token-border-default: var(--jelly-border);
+  --color-token-border-light: var(--jelly-border);
+  --color-token-list-hover-background: var(--jelly-pink);
+  --color-token-bg-primary: var(--jelly-surface);
+  --color-token-bg-secondary: var(--jelly-card);
+  --color-token-fg-primary: var(--jelly-ink);
+  --color-token-fg-secondary: var(--jelly-muted);
+  color-scheme: light;
+}
+html[data-candy-jelly="macos"].dark,
+html[data-candy-jelly="macos"][data-theme="dark"] {
+  --jelly-ink: #f6eaf4;
+  --jelly-muted: #cab5cb;
+  --jelly-accent: #f3a6cd;
+  --jelly-surface: #241e2b;
+  --jelly-card: #302735;
+  --jelly-border: #594359;
+  --jelly-pink: #493043;
+  --jelly-mint: #253d36;
+  --jelly-lilac: #39304d;
+  --jelly-shadow: 0 8px 24px #00000022;
+  --color-token-sidebar-surface-primary: #2b2332;
+  color-scheme: dark;
+}
+html[data-candy-jelly="macos"] body {
+  background: var(--jelly-surface);
+  color: var(--jelly-ink);
+}
+html[data-candy-jelly="macos"] aside.app-shell-left-panel {
+  background-color: var(--jelly-lilac) !important;
+  color: var(--jelly-ink);
+  border-right: 1px solid var(--jelly-border);
+}
+html[data-candy-jelly="macos"] aside.app-shell-left-panel nav {
+  background: transparent !important;
+}
+html[data-candy-jelly="macos"] aside.app-shell-left-panel nav :is(a, button):hover {
+  background-color: var(--jelly-card) !important;
+}
+html[data-candy-jelly="macos"] aside.app-shell-left-panel [aria-current="page"] {
+  background: var(--jelly-card) !important;
+  box-shadow: var(--jelly-shadow), inset 0 0 0 1px var(--jelly-border);
+  border-radius: 12px;
+}
+html[data-candy-jelly="macos"] main.main-surface {
+  background: radial-gradient(ellipse at 90% 0%, var(--jelly-mint), transparent 50%),
+    radial-gradient(ellipse at 0% 100%, var(--jelly-pink), transparent 55%), var(--jelly-surface) !important;
+  color: var(--jelly-ink);
+}
+html[data-candy-jelly="macos"] :is([data-message-author-role="user"], .user-message-bubble) {
+  background: var(--jelly-lilac) !important;
+  color: var(--jelly-ink) !important;
+  border: 1px solid var(--jelly-border);
+  border-radius: 20px 20px 6px 20px;
+  box-shadow: var(--jelly-shadow);
+}
+html[data-candy-jelly="macos"] :is([data-testid="composer"], .composer-parent) {
+  border-radius: 22px;
+  background: var(--jelly-card) !important;
+  border: 1px solid var(--jelly-border);
+  box-shadow: var(--jelly-shadow);
+}
+html[data-candy-jelly="macos"] :is([role="dialog"], [role="menu"]) {
+  background: var(--jelly-card);
+  border-color: var(--jelly-border);
+  color: var(--jelly-ink);
+}
+html[data-candy-jelly="macos"] :is(button, a, textarea, [contenteditable="true"]):focus-visible {
+  outline: 2px solid var(--jelly-accent);
+  outline-offset: 3px;
+}
+/* Decorative artwork paints behind content, has no hit target, and uses no fixed
+   position overlay. Window controls and native titlebar regions are untouched. */
+html[data-candy-jelly="macos"] aside.app-shell-left-panel {
+  background-image: url("__CANDY_CHICK__"),
+    linear-gradient(165deg, var(--jelly-pink), var(--jelly-lilac) 55%, var(--jelly-mint)) !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px bottom 64px, 0 0 !important;
+  background-size: 54px 54px, auto !important;
+}
+@media (prefers-contrast: more) {
+  html[data-candy-jelly="macos"] { --jelly-border: var(--jelly-muted); }
+}
+@media print {
+  html[data-candy-jelly="macos"] aside.app-shell-left-panel { background-image: none !important; }
+}

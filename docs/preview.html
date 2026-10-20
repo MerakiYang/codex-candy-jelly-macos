@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Candy Jelly macOS · 交互预览</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f1ecef;color:#45334b;font:14px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}button,a{font:inherit}button{cursor:pointer;color:inherit}header.preview-tools{display:flex;align-items:center;gap:10px;padding:18px 28px;background:#fff;border-bottom:1px solid #e9dee6}header.preview-tools strong{margin-right:auto}header.preview-tools button{background:#fff7fc;border:1px solid #dac8d6;padding:8px 16px;border-radius:30px}header.preview-tools small{color:#746078}section.frame{margin:32px auto;max-width:1240px;border:1px solid #d5c4d1;border-radius:20px;overflow:hidden;box-shadow:0 28px 80px #54354518}div.titlebar{height:48px;display:flex;align-items:center;gap:8px;padding:0 18px;background:var(--jelly-card,#fff);border-bottom:1px solid var(--jelly-border,#ddd)}div.titlebar i{display:block;width:12px;height:12px;border-radius:50%;background:#ff5f57}div.titlebar i:nth-child(2){background:#febc2e}div.titlebar i:nth-child(3){background:#28c840}div.titlebar span{margin:auto;color:var(--jelly-muted,#777);font-size:12px;padding-right:56px}div.shell{display:grid;grid-template-columns:244px minmax(0,1fr);min-height:640px;background:var(--jelly-surface,#fff)}aside.app-shell-left-panel{padding:24px 16px;background:#eee}aside h2{font-size:12px;color:var(--jelly-muted,#777);margin:32px 12px 12px;font-weight:500}aside .brand{display:flex;align-items:center;gap:8px;padding:0 10px 24px;font-weight:650;font-size:18px}aside .brand img{width:34px;height:34px}nav{display:grid;gap:8px}nav button,nav a{display:flex;align-items:center;gap:10px;border:0;text-decoration:none;padding:12px;border-radius:12px;color:inherit;background:transparent;text-align:left}.project{display:flex;align-items:center;gap:8px;padding:12px;font-size:12px}.project i{width:7px;height:7px;border-radius:50%;background:#aa72ca}main.main-surface{padding:38px 46px;background:#fff}main .eyebrow{font-size:11px;letter-spacing:2px;color:var(--jelly-muted,#777)}main h1{font-size:32px;font-weight:600;letter-spacing:-1px;margin:14px 0 12px}main .intro{color:var(--jelly-muted,#777);line-height:1.8;margin-bottom:30px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{padding:20px;border:1px solid var(--jelly-border,#ddd);background:var(--jelly-card,#fff);border-radius:18px;box-shadow:var(--jelly-shadow,none)}.card img{width:32px;height:32px}.card b{display:block;margin:12px 0 8px}.card p{font-size:12px;line-height:1.7;color:var(--jelly-muted,#777);margin:0}.chat{margin:28px 0;display:flex;justify-content:flex-end}.user-message-bubble{padding:14px 18px;background:#eee;font-size:13px}.composer-parent{padding:18px;background:#eee}textarea{border:0;outline:0;resize:vertical;width:100%;min-height:52px;background:transparent;color:inherit;font:inherit}.composer-footer{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--jelly-muted,#777)}.send{background:var(--jelly-accent,#555);color:white;border:0;border-radius:50%;height:28px;width:28px}footer.note{text-align:center;color:#746078;font-size:12px;padding:0 20px 25px;line-height:1.8}.dark body{background:#19161f;color:#f6eaf4}.dark header.preview-tools{background:#302735;border-color:#594359}.dark header.preview-tools button{background:#493043;border-color:#594359;color:#f6eaf4}.dark footer.note,.dark header.preview-tools small{color:#cab5cb}@media(max-width:800px){section.frame{margin:16px}.shell{grid-template-columns:190px minmax(0,1fr)!important}main.main-surface{padding:24px}.cards{grid-template-columns:1fr}.card:nth-child(n+2){display:none}header.preview-tools{flex-wrap:wrap}header.preview-tools small{display:none}}
+</style>
+<header class="preview-tools"><strong>🍬 Candy Jelly <small>macOS · v0.1.0</small></strong><button id="light">浅色</button><button id="dark">深色</button><button id="apply">应用主题</button><button id="restore">恢复原貌</button></header>
+<section class="frame">
+<div class="titlebar"><i></i><i></i><i></i><span>Codex · Candy Jelly 交互示意</span></div>
+<div class="shell">
+<aside class="app-shell-left-panel"><div class="brand"><img src="../assets/candy-chick.svg" alt="小鸡">Candy Jelly</div><nav><button aria-current="page">✦ 新建任务</button><button>⌘ 项目</button><button>◷ 最近的聊天</button></nav><h2>项目</h2><div class="project"><i></i> macOS 主题移植</div><div class="project"><i></i> 设计笔记</div><h2>今天</h2><nav><a href="#preview">整理一周的工作</a><a href="#preview">检查主题的可读性</a></nav></aside>
+<main class="main-surface"><div class="eyebrow">CANDY JELLY WORKSPACE</div><h1>今天想做些什么？</h1><p class="intro">粉色、薄荷绿和一点淡紫。<br>让熟悉的工作台，多一点轻松的颜色。</p><div class="cards"><article class="card"><img src="../assets/sprout-helper.svg" alt="嫩芽"><b>从一个想法开始</b><p>写下你的目标，让下一步清楚起来。</p></article><article class="card"><img src="../assets/candy-chick.svg" alt="小鸡"><b>继续手上的项目</b><p>保留熟悉的操作，让思路自然接续。</p></article><article class="card"><span style="font-size:28px">✿</span><b>留一点专注空间</b><p>圆润卡片、清楚的文字和柔和的配色。</p></article></div><div class="chat"><div class="user-message-bubble" data-message-author-role="user">帮我检查一下今天的计划。</div></div><form class="composer-parent" data-testid="composer"><textarea aria-label="预览输入框" placeholder="写下一个想法…"></textarea><div class="composer-footer"><span>＋　预览输入框 · 不发送消息</span><button type="button" class="send" aria-label="预览发送按钮">↑</button></div></form></main>
+</div></section>
+<footer class="note">独立界面示意，非真实 Codex 截图。增强模式只装饰原有界面，不添加示意中的任务卡片。<br><span id="status" role="status">正在载入</span></footer>
+<script type="module">
+import { installSkin } from '../src/renderer.mjs';
+let css = await (await fetch('../assets/candy-jelly.css')).text();
+for (const name of ['candy-chick', 'sprout-helper']) {
+  const svg = await (await fetch(`../assets/${name}.svg`)).text();
+  css = css.replaceAll(`__${name.toUpperCase().replaceAll('-', '_')}__`, `data:image/svg+xml,${encodeURIComponent(svg)}`);
+}
+const status = document.querySelector('#status');
+const apply = () => { installSkin(css); status.textContent = '果冻主题已应用'; };
+document.querySelector('#apply').onclick = apply;
+document.querySelector('#restore').onclick = () => { window.__CANDY_JELLY_MACOS__?.remove(); status.textContent = '已恢复原貌'; };
+document.querySelector('#light').onclick = () => { document.documentElement.classList.remove('dark'); apply(); };
+document.querySelector('#dark').onclick = () => { document.documentElement.classList.add('dark'); apply(); };
+document.querySelector('form').onsubmit = e => e.preventDefault();
+apply();
+</script>
+</html>
